@@ -2,6 +2,8 @@ var express = require('express');
 var hbs = require('hbs');
 var fs = require('fs');
 
+var port = process.env.PORT || 3000;
+
 var app = express();
 
 // handlebars
@@ -61,6 +63,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log(`Server is up on port 3000`);
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });
